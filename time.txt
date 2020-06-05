@@ -1,0 +1,4 @@
+Naive Bayes
+
+Training time: 0.441 s
+Prediction time: 0.001 s
