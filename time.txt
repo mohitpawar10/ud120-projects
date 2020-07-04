@@ -1,4 +1,9 @@
 Naive Bayes
+Training time   : 0.331s
+Prediction time : 0.001s
+Accuracy        : 0.971556277936
 
-Training time: 0.441 s
-Prediction time: 0.001 s
+SVM
+Training time   : 33.84s
+Prediction time : 0.007s
+Accuracy        : 0.976269809021

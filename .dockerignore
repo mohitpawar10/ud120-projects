@@ -1,0 +1,5 @@
+# Ignore everything 
+** 
+
+# Just send dependancy file
+!/requirements.txt
