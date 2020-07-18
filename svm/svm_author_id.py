@@ -9,6 +9,7 @@
 """
 
 import sys
+import numpy as np 
 from time import time
 sys.path.append("../tools/")
 
@@ -21,14 +22,7 @@ from sklearn import svm
 ### labels_train and labels_test are the corresponding item labels
 features_train, features_test, labels_train, labels_test = preprocess()
 
-
-
-
-#########################################################
-### your code goes here ###
-
-#########################################################
-clf = svm.SVC(kernel = "linear");
+clf = svm.SVC(C=10000,kernel = "rbf");
 
 t_train = time()
 
@@ -39,7 +33,13 @@ print "Training time:", round(time()-t_train, 3), "s"
 t_predict = time()
 
 ### use the trained classifier to predict labels for the test features
-pred = clf.predict(features_test[0])
+pred = clf.predict(features_test)
+
+print "Prediction for 10 ", pred[10]
+print "Prediction for 26 ", pred[26]
+print "Prediction for 50 ", pred[50]
+
+print "Chris Email", np.unique(pred, return_counts=True)
 
 print "Prediction time:", round(time()-t_predict, 3), "s"
 
